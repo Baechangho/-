@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;soc&apos; in &apos;EchoClient.sender(...)&apos; to &apos;socket&apos;&#x0D;&#x0A;- Original project: &apos;Network&apos;&#x0D;&#x0A;- Original element: &apos;EchoClient.sender(String, int, String).soc&apos;&#x0D;&#x0A;- Renamed element: &apos;soc&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;soc&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{EchoClient.java[EchoClient~sender~QString;~I~QString;@soc!466!483!473!475!QSocket;!0!false" name="socket" references="true" stamp="1590586580447" version="1.0"/>
+</session>

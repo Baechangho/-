@@ -1,0 +1,70 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.security.DigestInputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import javax.xml.bind.DatatypeConverter;
+
+public class DigestThread extends Thread {
+
+	private String filename;
+	private boolean stop = false;
+	private boolean flag = true;
+
+	public void setStop(boolean stop) {
+		this.stop = stop;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
+	}
+
+	public DigestThread(String filename) {
+		this.filename = filename;
+	}
+
+	public void run() {
+		while (!stop) {
+			try {
+				FileInputStream in = new FileInputStream(filename);
+				MessageDigest sha = MessageDigest.getInstance("SHA-256");
+				DigestInputStream din = new DigestInputStream(in, sha);
+				while (din.read() != -1)
+					;
+				din.close();
+				byte[] digest = sha.digest();
+
+				StringBuilder result = new StringBuilder(filename);
+				result.append(": ");
+				result.append(DatatypeConverter.printHexBinary(digest));
+				System.out.println(result);
+			} catch (IOException ex) {
+				System.err.println(ex);
+			} catch (NoSuchAlgorithmException ex) {
+				System.err.println(ex);
+			}
+			if (flag) {
+				System.out.println("File name " + filename + "Thread is working...");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else {
+				Thread.yield();
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		for (String filename : args) {
+			Thread t = new DigestThread(filename);
+			t.start();
+			
+			t.set
+		}
+		
+	}
+}

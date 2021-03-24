@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;FindMaxTast.java&apos; to &apos;FindMaxTask.java&apos;&#x0D;&#x0A;- Original project: &apos;Network&apos;&#x0D;&#x0A;- Original element: &apos;FindMaxTast.java&apos;&#x0D;&#x0A;- Renamed element: &apos;FindMaxTask.java&apos;" description="Rename compilation unit &apos;FindMaxTast.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{FindMaxTast.java" name="FindMaxTask.java" references="false" stamp="1586787181804" version="1.0"/>
+</session>
