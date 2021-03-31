@@ -113,56 +113,60 @@ public class makeKeyword {
 				System.out.println(result4);
 			}
 			
+			
+			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+			Document documentt = docBuilder.newDocument();
+			
 			// docs element
-			Element docs = document.createElement("docs");
-			document.appendChild(docs);
+			Element docs = documentt.createElement("docs");
+			documentt.appendChild(docs);
 						
 			// doc element
-			Element doc = document.createElement("doc");
+			Element doc = documentt.createElement("doc");
 			docs.appendChild(doc);
 			doc.setAttribute("id", "0");
 			
 			// title element
-			Element title2 = document.createElement("title");
-			title2.appendChild(document.createTextNode("떡"));
+			Element title2 = documentt.createElement("title");
+			title2.appendChild(documentt.createTextNode("떡"));
 			doc.appendChild(title2);
 			
 			// body element
-			Element body2 = document.createElement("body");
-			body2.appendChild(document.createTextNode(result0));
+			Element body2 = documentt.createElement("body");
+			body2.appendChild(documentt.createTextNode(result0));
 			doc.appendChild(body2);			
 			
 			
 			// doc element
-			Element doc3 = document.createElement("doc");
+			Element doc3 = documentt.createElement("doc");
 			docs.appendChild(doc);
 			doc.setAttribute("id", "0");
 			
 			// title element
-			Element title3 = document.createElement("title");
-			title3.appendChild(document.createTextNode("라면"));
+			Element title3 = documentt.createElement("title");
+			title3.appendChild(documentt.createTextNode("라면"));
 			doc.appendChild(title3);
 			
 			// body element
-			Element body3 = document.createElement("body");
-			body3.appendChild(document.createTextNode(result1));
+			Element body3 = documentt.createElement("body");
+			body3.appendChild(documentt.createTextNode(result1));
 			doc.appendChild(body3);	
 			
 			
 			
 			// doc element
-			Element doc4 = document.createElement("doc");
+			Element doc4 = documentt.createElement("doc");
 			docs.appendChild(doc);
 			doc.setAttribute("id", "0");
 			
 			// title element
-			Element title4 = document.createElement("title");
-			title4.appendChild(document.createTextNode("아이스크림"));
+			Element title4 = documentt.createElement("title");
+			title4.appendChild(documentt.createTextNode("아이스크림"));
 			doc.appendChild(title4);
 			
 			// body element
-			Element body4 = document.createElement("body");
-			body4.appendChild(document.createTextNode(result2));
+			Element body4 = documentt.createElement("body");
+			body4.appendChild(documentt.createTextNode(result2));
 			doc.appendChild(body4);	
 			
 			
@@ -170,46 +174,45 @@ public class makeKeyword {
 			
 			
 			// doc element
-			Element doc5 = document.createElement("doc");
+			Element doc5 = documentt.createElement("doc");
 			docs.appendChild(doc);
 			doc.setAttribute("id", "0");
 			
 			// title element
-			Element title5 = document.createElement("title");
-			title5.appendChild(document.createTextNode("초밥"));
+			Element title5 = documentt.createElement("title");
+			title5.appendChild(documentt.createTextNode("초밥"));
 			doc.appendChild(title5);
 			
 			// body element
-			Element body5 = document.createElement("body");
-			body5.appendChild(document.createTextNode(result3));
+			Element body5 = documentt.createElement("body");
+			body5.appendChild(documentt.createTextNode(result3));
 			doc.appendChild(body5);	
 			
-			
-			
-			
-			
-			
 			// doc element
-			Element doc6 = document.createElement("doc");
+			Element doc6 = documentt.createElement("doc");
 			docs.appendChild(doc);
 			doc.setAttribute("id", "0");
 			
 			// title element
-			Element title6 = document.createElement("title");
-			title6.appendChild(document.createTextNode("파스타"));
+			Element title6 = documentt.createElement("title");
+			title6.appendChild(documentt.createTextNode("파스타"));
 			doc.appendChild(title6);
 			
 			// body element
-			Element body6 = document.createElement("body");
-			body6.appendChild(document.createTextNode(result4));
+			Element body6 = documentt.createElement("body");
+			body6.appendChild(documentt.createTextNode(result4));
 			doc.appendChild(body6);	
+			
+			
+			
+			
 			
 			File collectionFile = new File("./files/keyword.xml");
 			fos = new FileOutputStream(collectionFile);
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
 //			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-			DOMSource source = new DOMSource(document);
+			DOMSource source = new DOMSource(documentt);
 			StreamResult result =  new StreamResult(fos);
 			transformer.transform(source, result);
 			
