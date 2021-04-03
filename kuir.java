@@ -17,6 +17,8 @@ public class kuir {
 			makeCollection.writeCollectionFile(dir);
 		else if ("-k".equals(func))
 			makeKeyword.writeKeyworkdFile(dir);
+		else if ("-i".equals(func))
+			indexer.indexer(dir);
 		else
 			System.out.println("기능은 -c 또는 -k이어야 합니다.");
 	}
