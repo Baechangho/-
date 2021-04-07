@@ -1,0 +1,6 @@
+[branch "origin/feature"]
+	remote = https://github.com/Baechangho/-.git
+	rebase = false
+[remote "origin"]
+	url = https://github.com/Baechangho/-.git
+	fetch = refs/heads/feature:refs/remotes/origin/feature

@@ -1,0 +1,36 @@
+{
+  "$id": "3",
+  "AutoRefresh": true,
+  "AutoRefreshRemotes": true,
+  "CommitTextLinks": null,
+  "DraftCommitMsg": null,
+  "IncomingSavedCount": 0,
+  "LastCheckedRemotes": "2021-04-07T23:43:26.8940159+09:00",
+  "LastUsedView": 0,
+  "LogBranchFilterIndex": 0,
+  "OutgoingSavedCount": 0,
+  "SidebarExpandedItems": [
+    "파일 상태",
+    "브랜치",
+    "파일 상태",
+    "브랜치"
+  ],
+  "SidebarWidth": 210.0,
+  "SubtreeLinks": [],
+  "NeedsLargeFilesPull": false,
+  "RemoteProjectLinks": [
+    {
+      "$id": "4",
+      "BaseUrl": "https://github.com",
+      "Identifier": "Baechangho/-",
+      "RemoteName": "origin",
+      "Type": 0,
+      "Username": "Baechangho",
+      "CloneUrl": null,
+      "ProjectUrl": null,
+      "AccountId": "Baechangho@github.com",
+      "AvatarUrl": null,
+      "DisplayName": "origin: https://github.com"
+    }
+  ]
+}
